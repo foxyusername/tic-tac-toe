@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#game_div{
+    overflow-x: hidden;
+    overflow-y: hidden;
+  width:100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  background:linear-gradient(to right,rgb(34, 34, 149),rgb(19, 3, 145));
+}
+
+#score_and_main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:100px;
+}
+.score_section{
+    width: 100%;
+    display: flex;
+    gap: 50px;
+    font-size: 3rem;
+    justify-content: center;
+    color: white;
+}
+.main{
+    display: grid;
+    grid-template-columns: 110px 110px 110px;
+    width: 344px;
+}
+
+.main div{
+ width: 110px;
+ height: 110px;
+font-size: 3rem;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ color: white;
+}
+
+.main div:nth-child(-n+6){
+  background-color: rgba(255, 255, 255, 0);
+  border-bottom: 3px solid rgb(245, 244, 244);
+}
+.main div:nth-child(1),
+.main div:nth-child(2),
+.main div:nth-child(4),
+.main div:nth-child(5),
+.main div:nth-child(7),
+.main div:nth-child(8){
+    border-right: 3px solid rgb(237, 239, 237);
+}
+
+#btn_main_div{
+  display:none;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+}
+#btn_div{
+    display: grid;
+    color: white;
+    width: 90%;
+    max-width: 400px;
+    height: 250px;
+    border-radius: 15px;
+    background-color: rgb(251, 251, 251);
+    border: 2px solid rgb(9, 9, 9);
+    box-shadow: 1px 1px 10px black;
+  text-align: center;
+}
+#btn_div h1{
+ font-size: 1.6rem;
+ margin-top: 40px;
+ font-family:sans-serif;
+ color: black;
+
+}
+
+.btn_section{
+    width: 100%;
+}
+#btn{
+    margin-top:40px;
+    width:120px;
+   height:45px; 
+   font-family: 'Courier New', Courier, monospace;
+   color: rgb(246, 239, 239);
+   font-size: 1.7rem;
+   background-color: rgb(5, 5, 5);
+   border: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width:360px){
+   #game_div{
+    width: 110vw;
+   }
+   .main{
+    grid-template-columns:80px 80px 80px ;
+    width: 254px;
+   }
+   .score_section{
+   font-size: 3rem;
+   margin-top: 10px;
+   }
+   .main div{
+    width: 80px;
+    height: 80px;
+   }
+}
+
+@media only screen and (max-height:550px){
+    #game_div{
+        height: 130vh;
+    }
+    .score_section{
+        margin-top: 0px;
+    }
+}
+@media only screen and (max-height:340px){
+  .main{
+    width: 200px;
+    grid-template-columns: 60px 60px 60px;
+    margin-top: -30px;
+    gap: 10px;
+  }
+  .main div{
+    width: 60px;
+    height: 60px;
+  }
+}
